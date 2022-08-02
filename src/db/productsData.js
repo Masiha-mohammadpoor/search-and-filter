@@ -51,7 +51,7 @@ export const productsData = [
     },
     {
         id : 5,
-        name : "Monstera deliciosa",
+        name : "Monstera",
         category : "apartment",
         price : "15",
         quantity : 3,
@@ -67,7 +67,7 @@ export const productsData = [
     },
     {
         id : 7,
-        name : "Araucaria heterophylla",
+        name : "heterophylla",
         category : "tree",
         price : "9.7",
         quantity : 13,

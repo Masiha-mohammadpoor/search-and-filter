@@ -1,0 +1,81 @@
+.product {
+    width: 16rem;
+    overflow: hidden;
+    height: 350px;
+    background-color: #ccc;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin: 40px;
+    /* padding: 40px; */
+}
+
+.img{
+    width: 230px;
+    height: 230px;
+    margin-top: 10px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    object-fit: cover;
+}
+
+
+.nameAndPrice{
+    width: 14rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.btns{
+    width: 14rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.addAndRemove{
+    width: 50%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.addAndRemove button{
+    width: 30px;
+    height: 30px;
+    border: none;
+    outline: none;
+    background-color: #3a5a40;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.deleteBtn{
+    border: none;
+    outline: none;
+    color: #8f1616;
+    font-size: 25px;
+    background-color: transparent;
+}
+
+button {
+    cursor: pointer;
+}
