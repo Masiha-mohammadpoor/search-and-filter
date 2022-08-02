@@ -1,0 +1,28 @@
+.nav{
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color : #bcb8b1;
+    padding : 25px;
+}
+
+.title{
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+    position: relative;
+    padding: 10px;
+}
+
+.github {
+    font-size: 30px;
+    color: #3a5a40;
+    cursor: pointer;
+}
+
+
+@media (max-width:365px){
+    .puch{
+        display: none;
+    }
+}

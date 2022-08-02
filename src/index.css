@@ -1,0 +1,15 @@
+@font-face{
+    font-family: "comforta";
+    src: url("utils/font/Comfortaa-Regular.otf") format("otf"),
+    url("utils/font/Comfortaa-Regular.ttf") format("ttf"),
+    url("utils/font/Comfortaa-Regular.woff") format("woff");
+}
+
+
+
+* {
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+    font-family : comforta;
+}
