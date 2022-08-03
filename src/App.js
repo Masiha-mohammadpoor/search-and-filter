@@ -1,18 +1,16 @@
 import Navbar from "./components/Navbar/Navbar";
 import ProductList from "./components/ProductList/ProductList";
-// import ProductList from "./components/ProductList/ProductList";
 import Provider from "./components/provider/Provider";
-import { productsData } from "./db/productsData";
-
+// import ProductList from "./ProductList/ProductList";
 
 
 const App = () => {
 
     return (
-        <Provider>
+            <Provider>
             <Navbar/>
             <ProductList/>
-        </Provider>
+            </Provider>
     );
 }
  

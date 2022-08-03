@@ -19,7 +19,11 @@ const Product = (props) => {
                     <span style={{fontSize : "20px"}}>{quantity}</span>
                     <button onClick={increment}>+</button>
                 </div>
-                <div><button className={styles.deleteBtn} onClick={remove}><FaTrashAlt/></button></div>
+                <div>
+                    <button className={styles.deleteBtn} onClick={remove}>
+                        <FaTrashAlt/>
+                    </button>
+                </div>
             </div>
         </article>
     );

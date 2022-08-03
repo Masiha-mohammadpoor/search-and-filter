@@ -1,44 +1,60 @@
 import { useContext , useReducer  , createContext} from "react";
 import {productsData} from "../../db/productsData";
 
-const useProducts = createContext();
-const useProductActions = createContext();
+const UseProducts = createContext();
+const UseProductActions = createContext();
 
 
 
 const Provider = ({children}) => {
 
     const reducer = (state , action) => {
-        // switch(action.type){
-        //     case "increment" : {
+        
+        switch(action.type){
+            case "decrement" : {
+                const index = state.findIndex(p => p.id === action.event);
+                const product = {...state[index]};
+                const updatedProduct = [...state];
 
-        //     }
-            
-        //     case "decrement" : {
+                if(product.quantity === 1){
+                    const filteredProduct = updatedProduct.filter(p => p.id !== action.event);
+                    return filteredProduct;
+                }        
+                product.quantity--;
+                updatedProduct[index] = product;
+                return updatedProduct;
+            }
 
-        //     }
-            
-        //     case "delete" : {
+            case "increment" : {
+                const index = state.findIndex(p => p.id === action.event);
+                const product = {...state[index]};
+                const updatedProduct = [...state];
+                product.quantity++;
+                updatedProduct[index] = product;
+                return updatedProduct;
+            }
 
-        //     }
-            
-        // }
+            case "remove" : {
+                const filteredProduct = state.filter(p => p.id !== action.event);
+                return filteredProduct;
+            }
+        }
     }
 
 
     const [product , setProduct] = useReducer(reducer , productsData);
 
     return (
-        <useProducts.Provider value={product}>
-            <useProductActions.Provider value={setProduct}>
+        <UseProducts.Provider value={product}>
+            <UseProductActions.Provider value={setProduct}>
                 {children}
-            </useProductActions.Provider>
-        </useProducts.Provider>
+            </UseProductActions.Provider>
+        </UseProducts.Provider>
     )
     
 }
  
 export default Provider;
 
-export const products = () =>  useContext(useProducts);
-export const productsActions = () =>  useContext(useProductActions);
+export const Products = () =>  useContext(UseProducts);
+export const ProductsActions = () =>  useContext(UseProductActions);
