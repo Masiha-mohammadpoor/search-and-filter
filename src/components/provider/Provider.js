@@ -38,6 +38,23 @@ const Provider = ({children}) => {
                 const filteredProduct = state.filter(p => p.id !== action.event);
                 return filteredProduct;
             }
+
+            case "search" : {
+                const value = action.event.toUpperCase();                
+
+                if(value === ""){
+                    console.log("yes");
+                    console.log(state)
+                    return productsData;
+                }
+                else{
+                    const products = [...state];
+                    const filteredProduct = products.filter(p => p.name.toUpperCase().includes(value));
+                    console.log(state)
+                    return filteredProduct;
+                }
+
+            }
         }
     }
 

@@ -1,10 +1,12 @@
 import styles from "./product.module.css";
-import {FaTrashAlt} from "react-icons/fa";
+import {FaTrashAlt , FaTrash} from "react-icons/fa";
 
 
 const Product = (props) => {
 
     const {img , title , price , quantity , decrement , increment , remove} = props;
+
+
 
     return ( 
         <article className={styles.product}>
@@ -15,7 +17,7 @@ const Product = (props) => {
             </div>
             <div className={styles.btns}>
                 <div className={styles.addAndRemove}>
-                    <button onClick={decrement}>-</button>
+                    {quantity > 1 ? <button onClick={decrement}>-</button> : <button onClick={decrement} className={styles.trashBtn}><FaTrash/></button>}
                     <span style={{fontSize : "20px"}}>{quantity}</span>
                     <button onClick={increment}>+</button>
                 </div>

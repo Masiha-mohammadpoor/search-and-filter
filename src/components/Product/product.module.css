@@ -32,10 +32,11 @@
 
 
 .nameAndPrice{
-    width: 14rem;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
+    align-items: center;
 }
 
 .btns{
@@ -78,4 +79,90 @@
 
 button {
     cursor: pointer;
+}
+
+.addAndRemove .trashBtn{
+    background-color: #f18f8f;
+    color: #8f1616;
+    font-size: 15px;
+}
+
+/* @media (max-width:615px){
+    .product{
+        width: 95vw;
+        margin: 0;
+        margin-bottom: 20px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+        height: fit-content;
+        background-color: transparent;
+        border-bottom: 2px solid #ccc;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+        justify-content: space-between;
+}
+
+    .img{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        margin: 10px;
+        box-shadow:0 0 5px 3px #ccc;
+        width: 90%;
+        height: 150px;
+    }
+
+    .nameAndPrice{
+        grid-column-start: 2;
+        grid-column-start: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .btns{
+        grid-column-start: 2;
+        grid-column-start: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+} */
+@media (max-width:615px){
+    .product{
+        margin: 10px;
+    }
+}
+
+
+@media (max-width:270px){
+    .product{
+        width: 95vw;
+        margin: 10px;
+    }
+
+    .img{
+        width: 90vw;
+    }
+
+    .nameAndPrice{
+        width: 100vw;
+        transform: scale(.8);
+        -webkit-transform: scale(.8);
+        -moz-transform: scale(.8);
+        -ms-transform: scale(.8);
+        -o-transform: scale(.8);
+}
+
+.btns{
+    width: 100vw;
+    transform: scale(.8);
+    -webkit-transform: scale(.8);
+    -moz-transform: scale(.8);
+    -ms-transform: scale(.8);
+    -o-transform: scale(.8);
+}
 }

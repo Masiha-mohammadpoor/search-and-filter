@@ -1,8 +1,30 @@
 .productList{
-    width: 90%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     display: grid;
     justify-content: center;
+    align-items: start;
     grid-template-columns: auto auto auto auto;
+    margin-top: 100px;
+}
+
+@media (max-width:1290px){
+    .productList{
+        grid-template-columns: auto auto auto;
+    }
+}
+@media (max-width:975px){
+    .productList{
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (max-width:546px){
+    .productList{
+        width: 100%;
+        grid-template-columns: auto;
+        margin-left:0;
+        margin-right:0;
+    }
 }

@@ -3,6 +3,8 @@ import { FaGithub } from "react-icons/fa";
 
 
 const Navbar = () => {
+
+    
     return (
         <nav className={styles.nav}>
             <span className={styles.puch}></span>
