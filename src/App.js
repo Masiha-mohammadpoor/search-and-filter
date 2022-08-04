@@ -1,7 +1,8 @@
 import Navbar from "./components/Navbar/Navbar";
 import ProductList from "./components/ProductList/ProductList";
 import Provider from "./components/provider/Provider";
-import Search from "./common/Search/Search";
+import Filter from "./components/Filter/Filter";
+import Data from "./db/productsData";
 // import ProductList from "./ProductList/ProductList";
 
 
@@ -9,8 +10,9 @@ const App = () => {
 
     return (
             <Provider>
+            <Data/>
             <Navbar/>
-            <Search/>
+            <Filter/>
             <ProductList/>
             </Provider>
     );

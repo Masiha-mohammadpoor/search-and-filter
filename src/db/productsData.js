@@ -14,14 +14,17 @@ import noto from "../utils/img/noto cactus.jpg";
 import philodendron from "../utils/img/philodendron.jpg";
 import opuntia from "../utils/img/opuntia cactus.jpg";
 import Callistemon from "../utils/img/Callistemon.jpg";
+import shefflera from "../utils/img/shefflera.jpg";
 
 
-export const productsData = [
+const Data = () => { 
+    
+    const productsData = [
     {
         id : 1,
         name : "sansevieria",
         category : "apartment",
-        price : "12.5",
+        price : 12.0,
         quantity : 9,
         image : sansevieria
     },
@@ -29,7 +32,7 @@ export const productsData = [
         id : 2,
         name : "echino cactus",
         category : "cactus",
-        price : "8.3",
+        price : 8.3,
         quantity : 4,
         image : echino
     },
@@ -37,7 +40,7 @@ export const productsData = [
         id : 3,
         name : "Peperomia",
         category : "apartment",
-        price : "6.9",
+        price : 6.9,
         quantity : 11,
         image : peperomia
     },
@@ -45,7 +48,7 @@ export const productsData = [
         id : 4,
         name : "big bonsy",
         category : "shrub",
-        price : "23.5",
+        price : 23.8,
         quantity : 8,
         image : bigBonsy
     },
@@ -53,7 +56,7 @@ export const productsData = [
         id : 5,
         name : "Monstera",
         category : "apartment",
-        price : "15",
+        price : 15.2,
         quantity : 3,
         image : Monstera
     },
@@ -61,7 +64,7 @@ export const productsData = [
         id : 6,
         name : "zamofilia",
         category : "apartment",
-        price : "12",
+        price : 12.5,
         quantity : 6,
         image : zamofilia
     },
@@ -69,7 +72,7 @@ export const productsData = [
         id : 7,
         name : "heterophylla",
         category : "tree",
-        price : "9.7",
+        price : 9.7,
         quantity : 13,
         image : Araucaria
     },
@@ -77,7 +80,7 @@ export const productsData = [
         id : 8,
         name :"aloe vera",
         category : "cactus",
-        price : "5.5",
+        price : 5.5,
         quantity : 3,
         image : aloeVera
     },
@@ -85,7 +88,7 @@ export const productsData = [
         id : 9,
         name :"ficus",
         category : "shrub",
-        price : "6.0",
+        price : 6.0,
         quantity : 7,
         image : ficus
     },
@@ -93,7 +96,7 @@ export const productsData = [
         id : 10,
         name :"petus",
         category : "apartment",
-        price : "3.8",
+        price : 3.8,
         quantity : 2,
         image : petus
     },
@@ -101,7 +104,7 @@ export const productsData = [
         id : 11,
         name :"benjamin",
         category : "tree",
-        price : "7.00",
+        price : 7.0,
         quantity : 10,
         image : benjamin
     },
@@ -109,7 +112,7 @@ export const productsData = [
         id : 12,
         name :"mini bonsy",
         category : "shrub",
-        price : "18.2",
+        price : 18.3,
         quantity : 1,
         image : miniBonsy
     },
@@ -117,7 +120,7 @@ export const productsData = [
         id : 13,
         name :"noto cactus",
         category : "cactus",
-        price : "3.6",
+        price : 3.6,
         quantity :18,
         image : noto
     },
@@ -125,7 +128,7 @@ export const productsData = [
         id : 14,
         name :"philodendron",
         category : "apartment",
-        price : "5.2",
+        price : 5.2,
         quantity :9,
         image : philodendron
     },
@@ -133,7 +136,7 @@ export const productsData = [
         id : 15,
         name :"opuntia cactus",
         category : "cactus",
-        price : "3.00",
+        price : 3.0,
         quantity :14,
         image : opuntia
     },
@@ -141,10 +144,25 @@ export const productsData = [
         id : 16,
         name :"Callistemon",
         category : "tree",
-        price : "8.2",
+        price : 8.2,
         quantity :6,
         image : Callistemon
+    },
+    {
+        id : 17,
+        name :"shefflera",
+        category : "shrub",
+        price : 16.0,
+        quantity :2,
+        image : shefflera
     },
     
 
 ]
+
+    return localStorage.setItem("products" , JSON.stringify(productsData));
+}
+
+export default Data;
+
+

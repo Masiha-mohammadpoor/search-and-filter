@@ -13,3 +13,27 @@
     box-sizing: border-box;
     font-family : comforta;
 }
+
+*::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  *::-webkit-scrollbar-track {
+    background: #b6b3b3; 
+  }
+   
+  /* Handle */
+  *::-webkit-scrollbar-thumb {
+    background: #3a5a40;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+  
+  /* Handle on hover */
+  *::-webkit-scrollbar-thumb:hover {
+    background: #243c28; 
+  }

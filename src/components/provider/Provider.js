@@ -1,9 +1,10 @@
 import { useContext , useReducer  , createContext} from "react";
-import {productsData} from "../../db/productsData";
+import _ from "lodash";
 
 const UseProducts = createContext();
 const UseProductActions = createContext();
 
+const productsData = JSON.parse(localStorage.getItem("products"));
 
 
 const Provider = ({children}) => {
@@ -43,17 +44,35 @@ const Provider = ({children}) => {
                 const value = action.event.toUpperCase();                
 
                 if(value === ""){
-                    console.log("yes");
-                    console.log(state)
-                    return productsData;
+                    return state;
                 }
                 else{
-                    const products = [...state];
-                    const filteredProduct = products.filter(p => p.name.toUpperCase().includes(value));
-                    console.log(state)
+                    const filteredProduct = state.filter(p => p.name.toUpperCase().includes(value));
                     return filteredProduct;
                 }
 
+            }
+
+            case "filter" : {
+                if(action.value === "all"){
+                    return productsData;
+                }else{
+                    return productsData.filter(p => p.category === action.value);
+                }
+            }
+
+            case "sort" : {
+                if(action.value === "lowest"){
+                    const lowestSorted = _.orderBy(state, ["price"],['asc']);
+                    return lowestSorted;
+                }else{
+                    const highestSorted = _.orderBy(state, ["price"],['desc']);
+                    return highestSorted;
+                }
+            }
+
+            default : {
+                return state;
             }
         }
     }

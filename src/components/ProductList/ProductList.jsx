@@ -8,7 +8,6 @@ const ProductList = () => {
     const allProducts = Products();
     const dispatch = ProductsActions();
 
-
     const renderProducts = () => {
         if(allProducts.length === 0){
             return ;
